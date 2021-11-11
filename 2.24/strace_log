@@ -1,0 +1,51 @@
+execve("./224.o", ["./224.o"], 0x7ffd754c0758 /* 46 vars */) = 0
+brk(NULL)                               = 0x6a8000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffc60d68b80) = -1 EINVAL (Invalid argument)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=58416, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 58416, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fc73f51c000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib64/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260|\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0n<\10z\312\2339T\236K\251,E\37\369"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=3228320, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc73f51a000
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 1892824, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fc73f34b000
+mprotect(0x7fc73f371000, 1679360, PROT_NONE) = 0
+mmap(0x7fc73f371000, 1363968, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7fc73f371000
+mmap(0x7fc73f4be000, 311296, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x173000) = 0x7fc73f4be000
+mmap(0x7fc73f50b000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bf000) = 0x7fc73f50b000
+mmap(0x7fc73f511000, 33240, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fc73f511000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc73f349000
+arch_prctl(ARCH_SET_FS, 0x7fc73f51b580) = 0
+mprotect(0x7fc73f50b000, 12288, PROT_READ) = 0
+mprotect(0x403000, 4096, PROT_READ)     = 0
+mprotect(0x7fc73f55b000, 8192, PROT_READ) = 0
+munmap(0x7fc73f51c000, 58416)           = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+brk(NULL)                               = 0x6a8000
+brk(0x6c9000)                           = 0x6c9000
+write(1, "Enter the filename to open for r"..., 40) = 40
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+read(0, "input.txt\n", 1024)            = 10
+openat(AT_FDCWD, "input.txt", O_RDONLY) = 3
+write(1, "Enter the filename to open for w"..., 40) = 40
+read(0, "output.txt\n", 1024)           = 11
+openat(AT_FDCWD, "output.txt", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 4
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=88, ...}, AT_EMPTY_PATH) = 0
+read(3, "This is a test to see whether ou"..., 4096) = 88
+newfstatat(4, "", {st_mode=S_IFREG|0644, st_size=0, ...}, AT_EMPTY_PATH) = 0
+read(3, "", 4096)                       = 0
+write(1, "\n", 1)                       = 1
+close(3)                                = 0
+write(4, "This is a test to see whether ou"..., 88) = 88
+close(4)                                = 0
+write(1, "Contents copied to output.txt", 29) = 29
+lseek(0, -1, SEEK_CUR)                  = -1 ESPIPE (Illegal seek)
+exit_group(0)                           = ?
++++ exited with 0 +++
