@@ -44,7 +44,7 @@ You will require the GNU Compiler Collection (GCC) in order to be able to run th
 ![App Screenshot](https://github.com/vedantjk/CS252-Assignment-/blob/main/2.24/images/Installing%20strace.png)
 - `strace -ostrace_log ./224.o`
 - The program will prompt the user to provide the name of the input file and output file
-- If it has been executed successfully, a "Success" message will be displayed
+- If it has been executed successfully, a "Contents copied to output.txt" message will be displayed
 
 ## Screenshots
 - Running the strace command to trace the system calls
